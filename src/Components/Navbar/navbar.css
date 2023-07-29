@@ -1,0 +1,82 @@
+.container{
+    width: 80%;
+   clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+    /* height: 50px;  */
+   padding: 0 0;
+   position: absolute;
+   top: 0;
+   left: 10%;
+    right: 10%;
+   
+  }
+  
+  .headermain{
+    /* position:absolute; */
+    width: 100%;
+    
+  }
+  
+  
+  .blackbelt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    
+    background-color: rgba(0, 0, 0, 0.829);
+    
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+  
+  
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    
+  }
+  
+  li {
+    padding-left: 40px;
+    padding-top: 10px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .headermain {
+      display: none;
+    }
+  }
+  
+  /* sm:hidden: Hide the element on screens equal to or larger than the "sm" breakpoint. */
+  @media (min-width: 640px) and (max-width: 767px) {
+    .headermain {
+      display: none;
+    }
+  }
+  
+  /* xsm:hidden: Hide the element on screens equal to or larger than the "xsm" breakpoint. */
+  @media (max-width: 639px) {
+    .headermain {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .headermain {
+      display: block;
+    }
+  }
+
+  .headermain {
+    display: flex;
+    color: white;
+    /* space-x-6: This utility class adds margin-right to the child elements to create space between them horizontally. */
+  }

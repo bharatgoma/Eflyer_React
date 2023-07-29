@@ -1,0 +1,23 @@
+.picscontainer{
+    max-width: 1400px;
+  height: 600px;
+  max-width: 1600px;
+  margin: auto;
+ 
+  
+
+}
+
+.mainpic{
+    width: 100%;
+  height: 100%;
+  background-size:cover;
+  background-position:center;
+
+  
+ 
+}
+
+
+
+

@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Product from '../Product/Product'
 import { useContext } from 'react';
 import { UserContext, SearchContext } from '../../Context/index';
+import Loader from '../Loader'
+
+
+
 
 
 
@@ -11,7 +15,7 @@ const ShoppingItems = () => {
     const [category] = useContext(UserContext);
     const [search] = useContext(SearchContext);
     const [data, setData] = useState([]);
-
+    const[loading,setLoading] = useState(true);
 
     const fetchData = async () => {
         const url = 'https://fakestoreapi.com/products';
@@ -20,7 +24,7 @@ const ShoppingItems = () => {
         setData(parsedData)
 
         if (category === 'categories') {
-
+           setLoading(false);
         }
         else {
             let result = parsedData.filter((item) => {
@@ -31,7 +35,7 @@ const ShoppingItems = () => {
 
 
         if (search === "" || search === " ") {
-
+                    
         }
         else {
             let Searched = parsedData.filter((value) => {
@@ -55,16 +59,20 @@ const ShoppingItems = () => {
     });
 
     return (
-       
+       <>
+      
         
         <div className="grid lg:grid-cols-3 md:grid-cols-2 transition-all bg-gray-200">
             {data.map((items) => {
-                return <Product key={items.id} id={items.id} category={items.category} price={items.price} image={items.image} title={items.title} productDescription={productDescription} />
+                return <Product key={items.id} id={items.id} category={items.category} price={items.price} image={items.image} title={items.title} productDescription={productDescription}  />
             })}
         </div>
+       {
+        loading ? <Loader  /> : null
+      }
         
-      
+        </>
     )
 }
 
-export default ShoppingItems
+export default ShoppingItems;

@@ -54,7 +54,7 @@ const SearchBar = () => {
                 <div>
                     <form>
                         <div className="relative">
-                            <input onSubmit={(e) => e.preventDefault()} onChange={handleSearchChange} value={search} type="search" id="default-search" className="xsm:w-[400px] block w-96 px-11 py-2.5 text-m text-gray-900 border border-gray-600 rounded-lg  hover:outline-blue-400" placeholder="Search any product" />
+                            <input onSubmit={(e) => e.preventDefault()} onChange={handleSearchChange} value={search} type="search" id="default-search" className="xsm:w-[280px] block w-96 px-11 py-2.5 text-m text-gray-900 border border-gray-600 rounded-lg  hover:outline-blue-400" placeholder="Search any product" />
 
                             <button onClick={handleButton} type="submit" className="text-white absolute right-0 bottom-0 bg-orange-500 hover:bg-yellow-400 font-medium rounded-md text-sm px-3 py-3"><Search /></button>
                         </div>

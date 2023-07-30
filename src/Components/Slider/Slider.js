@@ -10,7 +10,7 @@ const Slider = () => {
 
     return (
         <>
-
+          <div className='flex-2'>
             <div className='picscontainer group'>
                 <div
                     style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -21,6 +21,7 @@ const Slider = () => {
 
             <div className='flex justify-center'>
                 <SearchBar />
+            </div>
             </div>
         </>
     )

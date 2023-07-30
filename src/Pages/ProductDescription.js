@@ -27,7 +27,7 @@ const ProductDescription = (props) => {
         <div className="image w-[20rem] py-10">
             <img src={data.image} alt="" />
         </div>
-        <div className="description-content mx-32 flex flex-col xsm:w-[300px]">
+        <div className="description-content mx-32 flex flex-col xsm:w-[250px] ">
             <div className="category my-4 px-5 font-bold text-lg bg-yellow-500 self-center">{data.category}</div>
             <hr />
             <div className="title text-2xl font-semibold">{data.title}</div>
